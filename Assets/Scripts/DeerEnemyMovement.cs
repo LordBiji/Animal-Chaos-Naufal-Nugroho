@@ -11,4 +11,13 @@ public class DeerEnemyMovement : MonoBehaviour
     {
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
