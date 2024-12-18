@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float moveSpeed = 250f;
+
     void Start()
     {
         gameObject.GetComponent<Rigidbody>();
@@ -23,4 +24,5 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector3 (movementX * moveSpeed, 0f, 0f);
     }
+
 }
